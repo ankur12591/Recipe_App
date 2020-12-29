@@ -146,6 +146,7 @@ getRecipes() async {
                       ),
                       GestureDetector(
                         onTap: (){
+                          FocusScope.of(context).unfocus();
                           if(ingredient != null){
                             recipes = [];
                             getRecipes();
