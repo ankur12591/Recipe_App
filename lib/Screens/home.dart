@@ -109,6 +109,28 @@ getRecipes() async {
 
                   SizedBox(height: 14),
 
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Made by  ",style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                         // fontWeight: FontWeight.w300
+                      ),),
+                      Text("Ankur Sutariya",
+                        style: TextStyle(
+                            color: Colors.blueAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500
+
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 16.0,),
+
+
 
                   Text(
                     "What will you cook today?",
@@ -146,6 +168,7 @@ getRecipes() async {
                       ),
                       GestureDetector(
                         onTap: (){
+                          FocusScope.of(context).unfocus();
                           if(ingredient != null){
                             recipes = [];
                             getRecipes();
